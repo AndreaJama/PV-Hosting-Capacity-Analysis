@@ -12,7 +12,7 @@ A comprehensive tool for evaluating photovoltaic (PV) integration impacts on dis
 ## Requirements
 
 ### Core Software
-- [OpenDSS](https://www.epri.com/pages/sa/opendss) (Distribution System Simulator)
+- [OpenDSS](https://sourceforge.net/projects/electricdss/) (Distribution System Simulator)
 - [Python 3.7.9](https://www.python.org/downloads/release/python-379/)
 
 ### Python Packages
