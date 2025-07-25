@@ -20,3 +20,8 @@ A comprehensive tool for evaluating photovoltaic (PV) integration impacts on dis
 pip install py-dss-interface==1.0.9  # Python-OpenDSS interface
 pip install numpy pandas matplotlib  # Data analysis and visualization
 pip install seaborn scipy            # Additional utilities
+
+## Licença  
+- Este projeto usa a licença [BSD 3-Clause](LICENSE).  
+- O simulador OpenDSS possui [licença própria](https://www.epri.com/pages/sa/opendss).  
+- O pacote `py-dss-interface` segue a licença [MIT](https://pypi.org/project/py-dss-interface/).  
