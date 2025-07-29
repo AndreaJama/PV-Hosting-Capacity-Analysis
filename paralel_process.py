@@ -52,8 +52,8 @@ def run_simulation(params):
 
 if __name__ == '__main__':
     # Inputs
-    dss_file = r"C:\123Bus\Run_IEEE123Bus.DSS"
-    curvas_file = "C:\Mestrado\Pruebas\CH_static\loadShape_Coelba_MT_dia_util.csv"
+    dss_file = r"C:\DSS_files\Run_IEEE123Bus.DSS"
+    curvas_file = "C:\loadShape_Coelba_MT_dia_util.csv"
     dia = 'SOL' # Mude para 'CHUVA' para análise em dia chuvoso
 
     locations = list(range(1, 101))
