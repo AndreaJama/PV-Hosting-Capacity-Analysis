@@ -76,6 +76,7 @@ def compile_fluxo(dss, dss_file, dia, hora, curvas_file, location, Percentagem_N
 
     # Tensoes nodais
     buses_tensoes, v_max, v_min = fun.get_bus_node_voltages(dss)
+    Tensoes_abc_pu = fun.Tensoes_abc_pu(dss)
 
     # Potências totais dos sistemas fotovoltaicos
     total_pv_p, total_pv_q, total_pv_p_dict, total_pv_q_dict = fun.get_total_pv_powers(dss)
