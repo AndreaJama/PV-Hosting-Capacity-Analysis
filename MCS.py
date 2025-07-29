@@ -1,5 +1,5 @@
 
-# Monte Carlo Simulation
+# Monte Carlo Simulation (MCS)
 
 import compile_fluxo as fluxo
 import py_dss_interface
