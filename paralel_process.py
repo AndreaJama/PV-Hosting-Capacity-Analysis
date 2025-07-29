@@ -39,7 +39,8 @@ def run_simulation(params):
         "feeder_kvar": total_q_kvar,
         "pv_kw": total_pv_p_dict,
         "pv_kvar": total_pv_q_dict,
-        "perdas": total_losses_p_kw
+        "perdas": total_losses_p_kw,
+        "buses_tensoes": buses_tensoes
     }
 
     # Libera o objeto dss após o uso
