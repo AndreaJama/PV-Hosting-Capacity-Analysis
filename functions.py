@@ -480,8 +480,6 @@ def instalar_sfv(dia, dss, consumidores_escolhidos, tribuses_dict, monbuses_dict
             kv = monbuses_dict[bus_number]
             define_1ph_pvsystem(dia, dss, bus_with_node, kv, pmpp, pmpp)
 
-
-
 def get_bus_node_voltages(dss):
     """
     Retorna um dicionário com as tensões por fase de cada barra (barras numéricas, exceto 610 e 150).
@@ -517,6 +515,23 @@ def get_bus_node_voltages(dss):
 
     return buses_tensoes, v_max, v_min
 
+def Tensoes_abc_pu(dss):
+    Tensoes_abc_pu = []
+    for bus in dss.circuit_all_bus_names():
+        dss.circuit_set_active_bus(bus)
+        name_bus = dss.bus_name()
+        pu_bus = dss.bus_pu_vmag_angle()
+
+        # Inicializando pu_list com zeros para os índices ausentes
+        pu_list = [
+            pu_bus[0] if len(pu_bus) > 0 else 0,
+            pu_bus[2] if len(pu_bus) > 2 else 0,
+            pu_bus[4] if len(pu_bus) > 4 else 0
+        ]
+        Tensoes_abc_pu.append(pu_list)
+
+    return Tensoes_abc_pu
+    
 def get_total_pv_powers(dss):
     """
     Retorna as potências totais ativa (kW) e reativa (kVAr) de todos os PVsystems,
