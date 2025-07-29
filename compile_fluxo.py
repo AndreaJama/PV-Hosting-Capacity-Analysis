@@ -104,6 +104,6 @@ def compile_fluxo(dss, dss_file, dia, hora, curvas_file, location, Percentagem_N
     del dss
     gc.collect()
 
-    return num_OV, num_UV, num_SC, num_DT, buses_tensoes, v_max, v_min, total_pv_p, total_pv_q, \
+    return num_OV, num_UV, num_SC, num_DT, buses_tensoes, Tensoes_abc_pu, v_max, v_min, total_pv_p, total_pv_q, \
         total_losses_p_kw, total_p_kw, total_q_kvar, total_pv_p_dict, total_pv_q_dict
 
