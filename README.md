@@ -20,6 +20,7 @@ A comprehensive tool for evaluating photovoltaic (PV) integration impacts on dis
 pip install py-dss-interface==1.0.9  # Python-OpenDSS interface
 pip install numpy pandas matplotlib  # Data analysis and visualization
 pip install seaborn scipy            # Additional utilities
+pip install scikit-learn
 ```
 ## License  
 
