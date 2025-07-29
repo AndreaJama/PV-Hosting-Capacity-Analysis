@@ -18,7 +18,7 @@ def run_simulation(params):
     # Inicializa a interface OpenDSS
     dss = py_dss_interface.DSSDLL()
 
-    num_OV, num_UV, num_SC, num_DT, buses_tensoes, v_max, v_min, total_pv_p, total_pv_q, \
+    num_OV, num_UV, num_SC, num_DT, buses_tensoes, Tensoes_abc_pu, v_max, v_min, total_pv_p, total_pv_q, \
         total_losses_p_kw, total_p_kw, total_q_kvar, total_pv_p_dict, total_pv_q_dict = \
         fluxo.compile_fluxo(dss, dss_file, dia, hora_n, curvas_file, location_n, npfv_n)
 
@@ -32,15 +32,14 @@ def run_simulation(params):
         "Num_OV": num_OV,
         "Num_UV": num_UV,
         "Num_SC": num_SC,
-        "Num_DT": num_DT,
+        "buses_voltages": Tensoes_abc_pu,
         "total_pv_p": total_pv_p,
         "total_pv_q": total_pv_q,
         "feeder_kw": total_p_kw,
         "feeder_kvar": total_q_kvar,
         "pv_kw": total_pv_p_dict,
         "pv_kvar": total_pv_q_dict,
-        "perdas": total_losses_p_kw,
-        "buses_tensoes": buses_tensoes
+        "perdas": total_losses_p_kw
     }
 
     # Libera o objeto dss após o uso
