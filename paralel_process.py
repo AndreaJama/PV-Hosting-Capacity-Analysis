@@ -1,6 +1,5 @@
 
-# Paralelização em Windows
-# Para análise da Simulação de Monte Carlo (SMC)
+# Monte Carlo Simulation
 
 import compile_fluxo as fluxo
 import py_dss_interface
@@ -49,7 +48,7 @@ def run_simulation(params):
 
     return result
 
-
+# Paralel process in Windows
 if __name__ == '__main__':
     # Inputs
     dss_file = r"C:\DSS_Files\Run_IEEE123Bus.DSS"
