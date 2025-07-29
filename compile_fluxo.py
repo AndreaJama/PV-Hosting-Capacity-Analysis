@@ -47,7 +47,7 @@ def compile_fluxo(dss, dss_file, dia, hora, curvas_file, location, Percentagem_N
     # Obtecao das probabilidades ponderadas de cada carga segundo a sua potencia ativa instalada (kW)
     probabilidades = fun.calcular_probabilidades_ponderadas(all_loads_dict)
 
-    # -------------------------------------------- DIMENSIONAMENTO DOS SFVs ------------------------------------------ #
+    # ------------ DIMENSIONAMENTO DOS SFVs ------------- #
 
     # Definir a potencia do inversor de acordo com a tabela do INMET
     # Lista de potências dos inversores disponíveis, ordenada do maior para o menor
@@ -72,7 +72,7 @@ def compile_fluxo(dss, dss_file, dia, hora, curvas_file, location, Percentagem_N
 
     dss.solution_solve()
 
-    # Resultados
+    # ------------ RESULTADOS ------------- #
 
     # Tensoes nodais
     buses_tensoes, v_max, v_min = fun.get_bus_node_voltages(dss)
